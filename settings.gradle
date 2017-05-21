@@ -1,1 +1,1 @@
-include ':app', ':addendum', ':addendum-design'
+include ':app', ':addendum', ':addendum-design', ':addendum-recyclerview'
