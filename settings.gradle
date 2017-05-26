@@ -1,1 +1,1 @@
-include ':app', ':addendum', ':addendum-design', ':addendum-recyclerview'
+include ':app', ':addendum', ':addendum-design', ':addendum-recyclerview', ':addendum-parceler'
