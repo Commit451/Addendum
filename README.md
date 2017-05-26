@@ -18,7 +18,11 @@ then, in your app `build.gradle`
 dependencies {
     compile 'com.github.Commit451.Addendum:addendum:latest.version.here@aar'
     //for design support library
-    compile 'com.github.Commit451.Regalia:addendum-design:latest.version.here@aar'
+    compile 'com.github.Commit451.Addendum:addendum-design:latest.version.here@aar'
+    //for RecyclerView support
+    compile 'com.github.Commit451.Addendum:addendum-recyclerview:latest.version.here@aar'
+    //for [Parceler](https://github.com/johncarl81/parceler) support
+    compile 'com.github.Commit451.Addendum:addendum-parceler:latest.version.here@aar'
 }
 ```
 
