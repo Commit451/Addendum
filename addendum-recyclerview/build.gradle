@@ -29,3 +29,5 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$supportLibVersion"
     compile project(':addendum')
 }
+
+apply from: 'https://raw.githubusercontent.com/Commit451/gradle-android-javadocs/1.0.0/gradle-android-javadocs.gradle'
