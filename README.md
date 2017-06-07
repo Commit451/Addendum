@@ -26,6 +26,90 @@ dependencies {
 }
 ```
 
+## Addendum
+The general set of extensions. Covers the base framework and `app-compat`
+### Activity
+```kotlin
+//bind a view in a lazy way, like KotterKnife
+val text: TextView by bindView(R.id.first_name)
+//toggle fullscreen
+flagFullscreen()
+val screenHeight = screenHeight()
+val screenWidth = screenWidth()
+//set screen brightness
+brightness()
+```
+### Context
+```kotlin
+val color = color(R.color.black)
+copyToClipboard("A label", someString)
+```
+### Fragment
+```kotlin
+//bind a view in a lazy way, like KotterKnife
+val text: TextView by bindView(R.id.first_name)
+```
+### Intent
+```kotlin
+//for when it can be null, no needed hasValue check
+val someInt = intent.getIntExtra("some_key")
+val someFloat = intent.getFloatExtra("float_key")
+val someLong = intent.getLongExtra("long_key")
+val someDouble = intent.getDoubleExtra("double_key")
+```
+
+### String
+```kotlin
+val span = someHtmlString.htmlToSpanned()
+```
+
+### View
+```kotlin
+view.setHeight(somePixelValue)
+//sets view to visible
+view.visible()
+view.invisible()
+view.gone()
+//bind a view in a lazy way, like KotterKnife
+val text: TextView by bindView(R.id.first_name)
+```
+
+### ViewPager
+```kotlin
+viewPager.back()
+viewPager.forward()
+val isLast = viewPager.isOnLastPage()
+val isFirst = viewPager.isOnFirstPage()
+```
+
+## Addendum Design
+For the design support library
+
+### TextInputLayout
+```kotlin
+//Sets the error if empty, returning true if not empty
+val valid = textInputLayout.validateEmpty("Empty not allowed")
+val text = textInputLayout.text()
+```
+
+## Addendum Parceler
+For use with [Parceler](https://github.com/johncarl81/parceler)
+```kotlin
+val item = intent.getParcelerParcelableExtra("some_key")
+intent.putParcelerParcelableExtra("some_key", thing)
+val otherItem = bundle.getParcelerParcelableExtra("some_key")
+bundle.putParcelerParcelable("some_key", thing)
+```
+
+## Addendum RecyclerView
+For use with RecyclerView
+
+### ViewHolder
+```kotlin
+//within a view holder...
+val string = resources().getString(R.string.some_string)
+val context = context()
+```
 
 License
 --------
