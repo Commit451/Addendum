@@ -3,6 +3,7 @@ package com.commit451.addendum
 import android.annotation.TargetApi
 import android.app.Activity
 import android.graphics.Point
+import android.support.annotation.IdRes
 import android.view.View
 import android.view.WindowManager
 
@@ -27,11 +28,18 @@ fun Activity.screenWidth(): Int {
 }
 
 /**
- * Call this before setContentView
+ * Sets the screen brightness. Call this before setContentView.
+ * 0 is dimmest, 1 is brightest. Default value is 1
  */
-fun Activity.maxBrightness() {
+fun Activity.brightness(brightness: Float = 1f) {
     val params = window.attributes
-    params.screenBrightness = 1f // range from 0 - 1 as per docs
+    params.screenBrightness = brightness // range from 0 - 1 as per docs
     window.attributes = params
     window.addFlags(WindowManager.LayoutParams.FLAGS_CHANGED)
 }
+
+fun <T: View> Activity.bindView(@IdRes id: Int): Lazy<T> {
+    @Suppress("UNCHECKED_CAST")
+    return lazy(LazyThreadSafetyMode.NONE) { findViewById(id) as T }
+}
+
