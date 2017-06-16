@@ -38,8 +38,22 @@ fun Activity.brightness(brightness: Float = 1f) {
     window.addFlags(WindowManager.LayoutParams.FLAGS_CHANGED)
 }
 
-fun <T: View> Activity.bindView(@IdRes id: Int): Lazy<T> {
+fun <T : View> Activity.bindView(@IdRes id: Int): Lazy<T> {
     @Suppress("UNCHECKED_CAST")
     return lazy(LazyThreadSafetyMode.NONE) { findViewById(id) as T }
+}
+
+fun <T> Activity.extra(key: String): Lazy<T> {
+    return lazy(LazyThreadSafetyMode.NONE) {
+        @Suppress("UNCHECKED_CAST")
+        intent.extras.get(key) as T
+    }
+}
+
+fun <T> Activity.extraOrNull(key: String): Lazy<T?> {
+    return lazy(LazyThreadSafetyMode.NONE) {
+        @Suppress("UNCHECKED_CAST")
+        intent.extras.get(key) as? T?
+    }
 }
 

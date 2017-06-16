@@ -2,6 +2,7 @@ package com.commit451.addendum.sample
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Button
 import android.widget.TextView
 import com.commit451.addendum.bindView
 import com.commit451.addendum.getIntExtra
@@ -9,6 +10,7 @@ import com.commit451.addendum.getIntExtra
 class MainActivity : AppCompatActivity() {
 
     val textView by bindView<TextView>(R.id.text)
+    val buttonSecondActivity by bindView<Button>(R.id.button_second_activity)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,5 +19,11 @@ class MainActivity : AppCompatActivity() {
         textView.text = "Hi"
 
         val value = intent.getIntExtra("some_key")
+
+        buttonSecondActivity.setOnClickListener {
+            val intent = Main2Activity.intent(this)
+            startActivity(intent)
+        }
+
     }
 }
