@@ -32,6 +32,10 @@ The general set of extensions. Covers the base framework and `app-compat`
 ```kotlin
 //bind a view in a lazy way, like KotterKnife
 val text: TextView by bindView(R.id.first_name)
+//or
+val text by bindView<TextView>(R.id.first_name)
+//get from intent extras
+val someString by extra<String>(KEY_STRING)
 //toggle fullscreen
 flagFullscreen()
 val screenHeight = screenHeight()
