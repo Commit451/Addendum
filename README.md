@@ -16,18 +16,19 @@ allprojects {
 then, in your app `build.gradle`
 ```groovy
 dependencies {
-    compile 'com.github.Commit451.Addendum:addendum:latest.version.here@aar'
+    compile 'com.github.Commit451.Addendum:addendum:latest.version.here'
     //for design support library
-    compile 'com.github.Commit451.Addendum:addendum-design:latest.version.here@aar'
+    compile 'com.github.Commit451.Addendum:addendum-design:latest.version.here'
     //for RecyclerView support
-    compile 'com.github.Commit451.Addendum:addendum-recyclerview:latest.version.here@aar'
-    //for [Parceler](https://github.com/johncarl81/parceler) support
-    compile 'com.github.Commit451.Addendum:addendum-parceler:latest.version.here@aar'
+    compile 'com.github.Commit451.Addendum:addendum-recyclerview:latest.version.here'
+    //for Parceler support
+    compile 'com.github.Commit451.Addendum:addendum-parceler:latest.version.here'
 }
 ```
 
 ## Addendum
 The general set of extensions. Covers the base framework and `app-compat`
+
 ### Activity
 ```kotlin
 //bind a view in a lazy way, like KotterKnife
@@ -43,16 +44,19 @@ val screenWidth = screenWidth()
 //set screen brightness
 brightness()
 ```
+
 ### Context
 ```kotlin
 val color = color(R.color.black)
 copyToClipboard("A label", someString)
 ```
+
 ### Fragment
 ```kotlin
 //bind a view in a lazy way, like KotterKnife
 val text: TextView by bindView(R.id.first_name)
 ```
+
 ### Intent
 ```kotlin
 //for when it can be null, no needed hasValue check
