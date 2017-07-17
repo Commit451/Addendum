@@ -82,6 +82,16 @@ view.gone()
 val text: TextView by bindView(R.id.first_name)
 ```
 
+### ViewGroup
+```kotlin
+viewGroup.forEach { view ->
+    //do something with each view
+}
+root.forEachIndexed { i, view ->
+    //do something with each view and index
+}
+```
+
 ### ViewPager
 ```kotlin
 viewPager.back()
@@ -117,6 +127,8 @@ For use with RecyclerView
 //within a view holder...
 val string = resources().getString(R.string.some_string)
 val context = context()
+//bind a view in a lazy way, like KotterKnife
+val text: TextView by bindView(R.id.first_name)
 ```
 
 License
