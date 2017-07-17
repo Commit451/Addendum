@@ -2,6 +2,7 @@ package com.commit451.addendum.sample
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
@@ -29,9 +30,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        root.forEach { view ->
+        root.forEach { view: View ->
         }
-        root.forEachIndexed { i, view ->
+        root.forEachIndexed { i: Int, view: View ->
 
         }
 
