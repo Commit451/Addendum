@@ -10,6 +10,8 @@ import com.commit451.addendum.bindView
 import com.commit451.addendum.forEach
 import com.commit451.addendum.forEachIndexed
 import com.commit451.addendum.getIntExtra
+import com.commit451.addendum.threetenabp.toDateAtStartOfDay
+import org.threeten.bp.LocalDate
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         root.forEachIndexed { i: Int, view: View ->
 
         }
+
+        val today = LocalDate.now()
+        val date = today.toDateAtStartOfDay()
 
     }
 }

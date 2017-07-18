@@ -29,7 +29,8 @@ dependencies {
     compile "com.android.support:appcompat-v7:$supportLibVersion"
     compile project(':addendum')
     compile project(':addendum-design')
-    compile project(':addendum-recyclerview')
     compile project(':addendum-parceler')
+    compile project(':addendum-recyclerview')
+    compile project(':addendum-threetenabp')
     kapt 'org.parceler:parceler:1.1.8'
 }
