@@ -9,11 +9,11 @@ import android.support.v4.content.ContextCompat
 
 
 @ColorInt
-fun Context.color(@ColorRes color: Int) : Int {
+inline fun Context.color(@ColorRes color: Int) : Int {
     return ContextCompat.getColor(this, color)
 }
 
-fun Context.copyToClipboard(label: String, text: String) {
+inline fun Context.copyToClipboard(label: String, text: String) {
     val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
     val clip = ClipData.newPlainText(label, text)
     clipboard.primaryClip = clip

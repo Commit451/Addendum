@@ -23,6 +23,8 @@ dependencies {
     compile "com.github.Commit451.Addendum:addendum-recyclerview:latest.version.here"
     //for Parceler support
     compile "com.github.Commit451.Addendum:addendum-parceler:latest.version.here"
+    //for ThreeTenABP support
+    compile "com.github.Commit451.Addendum:addendum-threetenabp:latest.version.here"
 }
 ```
 
@@ -129,6 +131,15 @@ val string = resources().getString(R.string.some_string)
 val context = context()
 //bind a view in a lazy way, like KotterKnife
 val text: TextView by bindView(R.id.first_name)
+```
+
+## Addendum ThreeTenABP
+For use with [ThreeTenABP](https://github.com/JakeWharton/ThreeTenABP)
+```kotlin
+val localDate = Date().toLocalDate()
+val localDate = Calendar.getInstance().toLocalDate()
+val zonedDateTime = Calendar.getInstance().toZonedDateTime()
+val date = LocalDate().toDateAtStartOfDay()
 ```
 
 License
