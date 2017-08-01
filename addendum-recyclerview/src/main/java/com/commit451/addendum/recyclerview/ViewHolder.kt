@@ -14,5 +14,5 @@ inline val RecyclerView.ViewHolder.resources: Resources
 
 fun <T : View> RecyclerView.ViewHolder.bindView(@IdRes id: Int): Lazy<T> {
     @Suppress("UNCHECKED_CAST")
-    return lazy(LazyThreadSafetyMode.NONE) { itemView.findViewById(id) as T }
+    return lazy(LazyThreadSafetyMode.NONE) { itemView.findViewById<T>(id) }
 }

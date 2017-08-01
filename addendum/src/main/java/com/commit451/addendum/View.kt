@@ -23,5 +23,5 @@ inline fun View.gone() {
 
 inline fun <T: View> View.bindView(@IdRes id: Int): Lazy<T> {
     @Suppress("UNCHECKED_CAST")
-    return lazy(LazyThreadSafetyMode.NONE) { findViewById(id) as T }
+    return lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 }

@@ -40,7 +40,7 @@ inline fun Activity.brightness(brightness: Float = 1f) {
 
 inline fun <T : View> Activity.bindView(@IdRes id: Int): Lazy<T> {
     @Suppress("UNCHECKED_CAST")
-    return lazy(LazyThreadSafetyMode.NONE) { findViewById(id) as T }
+    return lazy(LazyThreadSafetyMode.NONE) { findViewById<T>(id) }
 }
 
 inline fun <T> Activity.extra(key: String): Lazy<T> {

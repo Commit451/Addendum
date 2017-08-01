@@ -5,6 +5,6 @@ import android.widget.TextView
 
 
 fun Snackbar.maxLines(lines: Int): Snackbar {
-    (view.findViewById(android.support.design.R.id.snackbar_text) as TextView).maxLines = lines
+    view.findViewById<TextView>(android.support.design.R.id.snackbar_text).maxLines = lines
     return this
 }

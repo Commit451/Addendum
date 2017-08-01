@@ -7,7 +7,7 @@ import android.view.View
 
 inline fun <T: View> Fragment.bindView(@IdRes id: Int): Lazy<T> {
     @Suppress("UNCHECKED_CAST")
-    return lazy(LazyThreadSafetyMode.NONE) { view?.findViewById(id) as T }
+    return lazy(LazyThreadSafetyMode.NONE) { view!!.findViewById<T>(id) }
 }
 
 inline fun <T> Fragment.argument(key: String): Lazy<T> {
