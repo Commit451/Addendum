@@ -25,10 +25,10 @@ inline fun <T> Fragment.argumentOrNull(key: String): Lazy<T?> {
 }
 
 /**
- * Attach parent fragment or context to the fragment, allowing you to get a reference
+ * Cast the parent fragment or context to the fragment, allowing you to get a reference
  * to the parent as the type you need. Call this within [Fragment.onAttach]
  */
-inline fun <reified T> Fragment.attach(): T {
+inline fun <reified T> Fragment.bindHost(): T {
     if (parentFragment != null) {
         if (parentFragment is T) {
             return parentFragment as T
