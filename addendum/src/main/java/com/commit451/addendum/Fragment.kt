@@ -23,3 +23,19 @@ inline fun <T> Fragment.argumentOrNull(key: String): Lazy<T?> {
         arguments.get(key) as? T?
     }
 }
+
+/**
+ * Attach parent fragment or context to the fragment, allowing you to get a reference
+ * to the parent as the type you need. Call this within [Fragment.onAttach]
+ */
+inline fun <reified T> Fragment.attach(): T {
+    if (parentFragment != null) {
+        if (parentFragment is T) {
+            return parentFragment as T
+        }
+    }
+    if (context is T) {
+        return context as T
+    }
+    throw IllegalStateException(this.javaClass.simpleName + " must be attached to a parent that implements the class passed in onAttach")
+}
