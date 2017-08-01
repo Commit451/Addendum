@@ -5,8 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.commit451.addendum.extra
-import com.commit451.addendum.parceler.parcelExtra
-import com.commit451.addendum.parceler.parcelExtraOrNull
+import com.commit451.addendum.parceler.parcelerExtra
+import com.commit451.addendum.parceler.parcelerExtraOrNull
 import com.commit451.addendum.parceler.putParcelerParcelableExtra
 import junit.framework.Assert
 
@@ -37,8 +37,8 @@ class Main2Activity : AppCompatActivity() {
     val string by extra<String>(KEY_STRING)
     val someInt by extra<Int>(KEY_INT)
     val someParcel by extra<Thing>(KEY_PARCEL)
-    val someParcelThing by parcelExtra<ParcelThing>(KEY_PARCEL_THING)
-    val nothing by parcelExtraOrNull<ParcelThing>(KEY_NOTHING)
+    val someParcelThing by parcelerExtra<ParcelThing>(KEY_PARCEL_THING)
+    val nothing by parcelerExtraOrNull<ParcelThing>(KEY_NOTHING)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
