@@ -26,9 +26,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:design:$supportLibVersion"
-    compile project(':addendum')
+    api "com.android.support:design:$supportLibVersion"
+    implementation project(':addendum')
 }
 
 apply from: 'https://raw.githubusercontent.com/Commit451/gradle-android-javadocs/1.0.0/gradle-android-javadocs.gradle'
