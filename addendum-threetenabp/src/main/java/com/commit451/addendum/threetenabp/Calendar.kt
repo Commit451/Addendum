@@ -1,9 +1,6 @@
 package com.commit451.addendum.threetenabp
 
-import org.threeten.bp.Instant
-import org.threeten.bp.LocalDate
-import org.threeten.bp.ZoneId
-import org.threeten.bp.ZonedDateTime
+import org.threeten.bp.*
 import java.util.*
 
 inline fun Calendar.toZonedDateTime(): ZonedDateTime {
@@ -14,6 +11,11 @@ inline fun Calendar.toZonedDateTime(): ZonedDateTime {
 
 inline fun Calendar.toLocalDate(): LocalDate {
     //gotta add one to the cal month since it starts at 0
-    val monthOfYear = this.get(Calendar.MONTH) + 1
-    return LocalDate.of(this.get(Calendar.YEAR), monthOfYear, this.get(Calendar.DAY_OF_MONTH))
+    val monthOfYear = get(Calendar.MONTH) + 1
+    return LocalDate.of(get(Calendar.YEAR), monthOfYear, get(Calendar.DAY_OF_MONTH))
+}
+
+inline fun Calendar.toLocalDateTime(): LocalDateTime {
+    val monthOfYear = get(Calendar.MONTH) + 1
+    return LocalDateTime.of(get(Calendar.YEAR), monthOfYear, get(Calendar.DAY_OF_MONTH), get(Calendar.HOUR_OF_DAY), get(Calendar.MINUTE), get(Calendar.SECOND))
 }
