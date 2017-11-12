@@ -3,7 +3,7 @@ package com.commit451.addendum
 import android.content.res.AssetManager
 import java.nio.charset.Charset
 
-fun AssetManager.openAsString(fileName: String): String? {
+fun AssetManager.openAsString(fileName: String): String {
     val `is` = open(fileName)
     val size = `is`.available()
     val buffer = ByteArray(size)
