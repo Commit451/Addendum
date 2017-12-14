@@ -48,5 +48,8 @@ class MainActivity : AppCompatActivity() {
         root.onPreDraw({
             Timber.d("onPreDraw width: ${root.width}")
         })
+
+        buttonSecondActivity.margins(topMargin = 400)
+        buttonSecondActivity.padding(leftPadding = 500)
     }
 }
