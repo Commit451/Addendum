@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api "com.android.support:appcompat-v7:$supportLibVersion"
 }
 
