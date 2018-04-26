@@ -28,7 +28,7 @@ dependencies {
 
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
 
-    implementation 'com.jakewharton.timber:timber:4.6.0'
+    implementation 'com.jakewharton.timber:timber:4.7.0'
 
     implementation project(':addendum')
     implementation project(':addendum-design')
