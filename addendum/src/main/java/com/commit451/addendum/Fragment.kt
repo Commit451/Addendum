@@ -13,14 +13,14 @@ inline fun <T: View> Fragment.bindView(@IdRes id: Int): Lazy<T> {
 inline fun <T> Fragment.argument(key: String): Lazy<T> {
     return lazy(LazyThreadSafetyMode.NONE) {
         @Suppress("UNCHECKED_CAST")
-        arguments.get(key) as T
+        arguments!!.get(key) as T
     }
 }
 
 inline fun <T> Fragment.argumentOrNull(key: String): Lazy<T?> {
     return lazy(LazyThreadSafetyMode.NONE) {
         @Suppress("UNCHECKED_CAST")
-        arguments.get(key) as? T?
+        arguments?.get(key) as? T?
     }
 }
 

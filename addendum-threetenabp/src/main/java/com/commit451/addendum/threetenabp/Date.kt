@@ -1,3 +1,5 @@
+@file:Suppress("NOTHING_TO_INLINE")
+
 package com.commit451.addendum.threetenabp
 
 import org.threeten.bp.Instant
@@ -17,6 +19,6 @@ inline fun Date.toLocalDateTime(): LocalDateTime {
     return cal.toLocalDateTime()
 }
 
-inline fun Date.toInstant(): Instant {
+inline fun Date.toThreeTenInstant(): Instant {
     return Instant.ofEpochMilli(this.time)
 }

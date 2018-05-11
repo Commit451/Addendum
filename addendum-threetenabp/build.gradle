@@ -3,7 +3,6 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -26,7 +25,7 @@ android {
 }
 
 dependencies {
-    api "com.jakewharton.threetenabp:threetenabp:1.0.5"
+    api "com.jakewharton.threetenabp:threetenabp:1.1.0"
     implementation project(':addendum')
 }
 

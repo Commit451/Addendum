@@ -1,3 +1,5 @@
+@file:Suppress("NOTHING_TO_INLINE")
+
 package com.commit451.addendum
 
 import android.support.v4.view.ViewPager
@@ -11,7 +13,7 @@ inline fun ViewPager.forward(animate: Boolean = true) {
 }
 
 inline fun ViewPager.isOnLastPage(): Boolean {
-    return currentItem == adapter.count - 1
+    return currentItem == (adapter?.count ?: 0) - 1
 }
 
 inline fun ViewPager.isOnFirstPage(): Boolean {

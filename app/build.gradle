@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+
     defaultConfig {
         applicationId "com.commit451.addendum.sample"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -24,9 +25,11 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
+
+    implementation 'com.jakewharton.timber:timber:4.7.0'
 
     implementation project(':addendum')
     implementation project(':addendum-design')
@@ -34,5 +37,5 @@ dependencies {
     implementation project(':addendum-recyclerview')
     implementation project(':addendum-threetenabp')
 
-    kapt 'org.parceler:parceler:1.1.9'
+    kapt 'org.parceler:parceler:1.1.10'
 }
