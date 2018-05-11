@@ -1,3 +1,5 @@
+@file:Suppress("unused", "NOTHING_TO_INLINE")
+
 package com.commit451.addendum.recyclerview
 
 import android.content.Context
@@ -12,7 +14,7 @@ inline val RecyclerView.ViewHolder.context: Context
 inline val RecyclerView.ViewHolder.resources: Resources
     get() = itemView.context.resources
 
-fun <T : View> RecyclerView.ViewHolder.bindView(@IdRes id: Int): Lazy<T> {
+inline fun <T : View> RecyclerView.ViewHolder.bindView(@IdRes id: Int): Lazy<T> {
     @Suppress("UNCHECKED_CAST")
     return lazy(LazyThreadSafetyMode.NONE) { itemView.findViewById<T>(id) }
 }

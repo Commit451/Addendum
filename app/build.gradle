@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.commit451.addendum.sample"
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 21
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
@@ -19,9 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
-    }
 }
 
 dependencies {
@@ -30,6 +27,8 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
 
     implementation 'com.jakewharton.timber:timber:4.7.0'
+
+    implementation 'androidx.core:core-ktx:0.3'
 
     implementation project(':addendum')
     implementation project(':addendum-design')

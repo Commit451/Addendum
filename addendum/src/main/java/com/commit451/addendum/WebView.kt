@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.commit451.addendum
 
 import android.webkit.WebView

@@ -1,3 +1,5 @@
+@file:Suppress("unused", "NOTHING_TO_INLINE")
+
 package com.commit451.addendum
 
 import android.content.Intent
@@ -7,7 +9,7 @@ import android.content.Intent
  * Standard [Intent.getIntExtra] but allows for null. Note that this would treat [Int.MIN_VALUE]
  * as null if you were to pass it
  */
-fun Intent.getIntExtra(name: String): Int? {
+inline fun Intent.getIntExtra(name: String): Int? {
     val value = getIntExtra(name, Int.MIN_VALUE)
     if (value == Int.MIN_VALUE) {
         return null
@@ -19,7 +21,7 @@ fun Intent.getIntExtra(name: String): Int? {
  * Standard [Intent.getBooleanExtra] but allows for null. Note that this would treat [Int.MIN_VALUE]
  * as null if you were to pass it
  */
-fun Intent.getFloatExtra(name: String): Float? {
+inline fun Intent.getFloatExtra(name: String): Float? {
     val value = getFloatExtra(name, Float.MIN_VALUE)
     if (value == Float.MIN_VALUE) {
         return null
@@ -31,7 +33,7 @@ fun Intent.getFloatExtra(name: String): Float? {
  * Standard [Intent.getLongExtra] but allows for null. Note that this would treat [Long.MIN_VALUE]
  * as null if you were to pass it
  */
-fun Intent.getLongExtra(name: String): Long? {
+inline fun Intent.getLongExtra(name: String): Long? {
     val value = getLongExtra(name, Long.MIN_VALUE)
     if (value == Long.MIN_VALUE) {
         return null
@@ -43,7 +45,7 @@ fun Intent.getLongExtra(name: String): Long? {
  * Standard [Intent.getDoubleExtra] but allows for null. Note that this would treat [Double.MIN_VALUE]
  * as null if you were to pass it
  */
-fun Intent.getDoubleExtra(name: String): Double? {
+inline fun Intent.getDoubleExtra(name: String): Double? {
     val value = getDoubleExtra(name, Double.MIN_VALUE)
     if (value == Double.MIN_VALUE) {
         return null

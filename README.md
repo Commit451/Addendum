@@ -1,5 +1,5 @@
 # Addendum
-The best Kotlin Extensions for Android
+Useful Kotlin Extensions for the Android SDK and popular Android Libraries
 
 [![Build Status](https://travis-ci.org/Commit451/Addendum.svg?branch=master)](https://travis-ci.org/Commit451/Addendum) [![](https://jitpack.io/v/Commit451/Addendum.svg)](https://jitpack.io/#Commit451/Addendum)
 
@@ -141,6 +141,9 @@ val localDate = Calendar.getInstance().toLocalDate()
 val zonedDateTime = Calendar.getInstance().toZonedDateTime()
 val date = LocalDate().toDateAtStartOfDay()
 ```
+
+## What about [Android KTX](https://github.com/android/android-ktx)
+Addendum and Android KTX can be used in parallel, and efforts are made to **not** duplicate functionality that KTX offers. That being said, KTX is restricted presently to just include Android Platform SDK extensions and does not include extensions for other libraries, such as the design support library or RecyclerView.
 
 License
 --------

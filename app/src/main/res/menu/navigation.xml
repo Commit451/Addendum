@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/ic_adb_black_24dp"
+        android:title="ADB"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navDirectory"
+        android:icon="@drawable/ic_color_lens_black_24dp"
+        android:title="Color"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navNotifications"
+        android:icon="@drawable/ic_drive_eta_black_24dp"
+        android:title="Drive"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navProfile"
+        android:icon="@drawable/ic_motorcycle_black_24dp"
+        android:title="Moto"
+        app:showAsAction="ifRoom" />
+</menu>

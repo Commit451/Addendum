@@ -1,3 +1,5 @@
+@file:Suppress("NOTHING_TO_INLINE", "unused")
+
 package com.commit451.addendum
 
 
