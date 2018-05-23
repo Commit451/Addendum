@@ -24,11 +24,11 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation 'androidx.core:core-ktx:0.3'
+    
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
 
     implementation 'com.jakewharton.timber:timber:4.7.0'
-
-    implementation 'androidx.core:core-ktx:0.3'
 
     implementation project(':addendum')
     implementation project(':addendum-design')
