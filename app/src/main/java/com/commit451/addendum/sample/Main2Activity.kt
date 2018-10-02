@@ -3,12 +3,11 @@ package com.commit451.addendum.sample
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.commit451.addendum.extra
 import com.commit451.addendum.parceler.parcelerExtra
 import com.commit451.addendum.parceler.parcelerExtraOrNull
 import com.commit451.addendum.parceler.putParcelerParcelableExtra
-import junit.framework.Assert
 
 class Main2Activity : AppCompatActivity() {
 
@@ -43,13 +42,5 @@ class Main2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-
-        Assert.assertEquals("asdf", string)
-        Assert.assertEquals(100, someInt)
-        Assert.assertEquals(200, someParcel.someValue)
-
-        Assert.assertEquals("Something", someParcelThing.name)
-
-        Assert.assertNull(nothing)
     }
 }

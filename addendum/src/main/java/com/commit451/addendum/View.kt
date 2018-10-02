@@ -2,10 +2,10 @@
 
 package com.commit451.addendum
 
-import android.support.annotation.IdRes
-import android.support.annotation.Px
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.IdRes
+import androidx.annotation.Px
 
 const val SENTINEL_NO_MARGIN_GIVEN = Int.MAX_VALUE - 6
 
@@ -27,9 +27,9 @@ inline fun <T : View> View.bindView(@IdRes id: Int): Lazy<T> {
 }
 
 inline fun View.updateMargins(@Px left: Int = SENTINEL_NO_MARGIN_GIVEN,
-                        @Px top: Int = SENTINEL_NO_MARGIN_GIVEN,
-                        @Px right: Int = SENTINEL_NO_MARGIN_GIVEN,
-                        @Px bottom: Int = SENTINEL_NO_MARGIN_GIVEN) {
+                              @Px top: Int = SENTINEL_NO_MARGIN_GIVEN,
+                              @Px right: Int = SENTINEL_NO_MARGIN_GIVEN,
+                              @Px bottom: Int = SENTINEL_NO_MARGIN_GIVEN) {
     val params = layoutParams as ViewGroup.MarginLayoutParams
     val finalLeftMargin = if (left == SENTINEL_NO_MARGIN_GIVEN) params.leftMargin else left
     val finalTopMargin = if (top == SENTINEL_NO_MARGIN_GIVEN) params.topMargin else top
