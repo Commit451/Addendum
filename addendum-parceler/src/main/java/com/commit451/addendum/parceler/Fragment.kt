@@ -2,7 +2,7 @@
 
 package com.commit451.addendum.parceler
 
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 
 inline fun <T> Fragment.parcelerArgument(key: String): Lazy<T> {
     return lazy(LazyThreadSafetyMode.NONE) {

@@ -1,24 +1,24 @@
 buildscript {
-    ext.kotlin_version = '1.2.41'
+    ext.kotlin_version = '1.2.71'
     repositories {
-        jcenter()
         google()
+        jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.17.0'
+    id 'com.github.ben-manes.versions' version '0.20.0'
 }
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        jcenter()
     }
 }
 
@@ -28,7 +28,6 @@ task clean(type: Delete) {
 
 ext {
     minSdkVersion = 16
-    compileSdkVersion = 27
+    compileSdkVersion = 28
     targetSdkVersion = compileSdkVersion
-    supportLibVersion = '27.1.1'
 }

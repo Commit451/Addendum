@@ -9,14 +9,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 }
 
 dependencies {
-    api 'org.parceler:parceler-api:1.1.10'
+    api 'org.parceler:parceler-api:1.1.11'
     implementation project(':addendum')
 }
 

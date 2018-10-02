@@ -2,7 +2,7 @@
 
 package com.commit451.addendum
 
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 
 inline fun ViewPager.back(animate: Boolean = true) {
     setCurrentItem(currentItem - 1, animate)

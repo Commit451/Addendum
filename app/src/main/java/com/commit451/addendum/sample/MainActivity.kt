@@ -1,17 +1,16 @@
 package com.commit451.addendum.sample
 
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.*
 import com.commit451.addendum.bindView
-import com.commit451.addendum.design.disableShiftingMode
 import com.commit451.addendum.getIntExtra
 import com.commit451.addendum.threetenabp.toDateAtStartOfDay
 import com.commit451.addendum.updateMargins
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.threeten.bp.LocalDate
 import timber.log.Timber
 
@@ -53,6 +52,5 @@ class MainActivity : AppCompatActivity() {
 
         buttonSecondActivity.updateMargins(top = 400)
         buttonSecondActivity.updatePadding(left = 200)
-        bottomNavigationView.disableShiftingMode()
     }
 }

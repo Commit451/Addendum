@@ -11,7 +11,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -24,11 +23,11 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation 'androidx.core:core-ktx:0.3'
+    implementation 'androidx.core:core-ktx:1.0.0'
     
-    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "androidx.appcompat:appcompat:1.0.0"
 
-    implementation 'com.jakewharton.timber:timber:4.7.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
     implementation project(':addendum')
     implementation project(':addendum-design')
@@ -36,5 +35,5 @@ dependencies {
     implementation project(':addendum-recyclerview')
     implementation project(':addendum-threetenabp')
 
-    kapt 'org.parceler:parceler:1.1.10'
+    kapt 'org.parceler:parceler:1.1.11'
 }

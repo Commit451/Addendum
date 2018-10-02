@@ -9,14 +9,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 }
 
 dependencies {
-    api "com.android.support:recyclerview-v7:$supportLibVersion"
+    api "androidx.recyclerview:recyclerview:1.0.0"
     implementation project(':addendum')
 }
 

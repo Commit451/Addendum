@@ -9,15 +9,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-        consumerProguardFiles 'proguard.cfg'
     }
 }
 
 dependencies {
-    api "com.android.support:design:$supportLibVersion"
+    api "com.google.android.material:material:1.0.0"
     implementation project(':addendum')
 }
 

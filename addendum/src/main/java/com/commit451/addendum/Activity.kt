@@ -4,9 +4,9 @@ package com.commit451.addendum
 
 import android.app.Activity
 import android.graphics.Point
-import android.support.annotation.IdRes
 import android.view.View
 import android.view.WindowManager
+import androidx.annotation.IdRes
 
 
 inline fun Activity.flagFullscreen() {
