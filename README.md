@@ -142,8 +142,8 @@ val zonedDateTime = Calendar.getInstance().toZonedDateTime()
 val date = LocalDate().toDateAtStartOfDay()
 ```
 
-## What about [Android KTX](https://github.com/android/android-ktx)
-Addendum and Android KTX can be used in parallel, and efforts are made to **not** duplicate functionality that KTX offers. That being said, KTX is restricted presently to just include Android Platform SDK extensions and does not include extensions for other libraries, such as the design support library or RecyclerView.
+## What about [Android KTX](https://github.com/android/android-ktx)?
+Addendum and Android KTX can be used in parallel, and efforts are made to **not** duplicate functionality that KTX offers. That being said, the ktx libraries restricted presently to just include Android Platform SDK extensions and support library extensions and does not include extensions for 3rd party libraries.
 
 License
 --------
