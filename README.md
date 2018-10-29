@@ -16,15 +16,15 @@ allprojects {
 then, in your app `build.gradle`
 ```groovy
 dependencies {
-    compile "com.github.Commit451.Addendum:addendum:latest.version.here"
+    implementation "com.github.Commit451.Addendum:addendum:latest.version.here"
     //for design support library
-    compile "com.github.Commit451.Addendum:addendum-design:latest.version.here"
+    implementation "com.github.Commit451.Addendum:addendum-design:latest.version.here"
     //for RecyclerView support
-    compile "com.github.Commit451.Addendum:addendum-recyclerview:latest.version.here"
+    implementation "com.github.Commit451.Addendum:addendum-recyclerview:latest.version.here"
     //for Parceler support
-    compile "com.github.Commit451.Addendum:addendum-parceler:latest.version.here"
+    implementation "com.github.Commit451.Addendum:addendum-parceler:latest.version.here"
     //for ThreeTenABP support
-    compile "com.github.Commit451.Addendum:addendum-threetenabp:latest.version.here"
+    implementation "com.github.Commit451.Addendum:addendum-threetenabp:latest.version.here"
 }
 ```
 
