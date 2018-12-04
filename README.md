@@ -143,7 +143,7 @@ val date = LocalDate().toDateAtStartOfDay()
 ```
 
 ## What about [Android KTX](https://github.com/android/android-ktx)?
-Addendum and Android KTX can be used in parallel, and efforts are made to **not** duplicate functionality that KTX offers. That being said, the ktx libraries restricted presently to just include Android Platform SDK extensions and support library extensions and does not include extensions for 3rd party libraries.
+Addendum and Android KTX can be used in parallel, and efforts are made to **not** duplicate functionality that KTX offers. That being said, the ktx libraries restricted presently to just include Android Platform SDK extensions and AndroidX library extensions and does not include extensions for 3rd party libraries, as Addendum does.
 
 License
 --------
