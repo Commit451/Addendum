@@ -15,7 +15,9 @@ android {
 dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    api "androidx.appcompat:appcompat:1.0.0"
+    api "androidx.appcompat:appcompat:1.0.2"
+
+    testImplementation "junit:junit:4.12"
 }
 
 apply from: 'https://raw.githubusercontent.com/Commit451/gradle-android-javadocs/1.0.0/gradle-android-javadocs.gradle'
