@@ -8,14 +8,19 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.util.TypedValue
+import android.widget.Toast
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
 
+inline fun Context.toast(text: String, length: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(this, text, length)
+            .show()
+}
 
 @ColorInt
-inline fun Context.color(@ColorRes color: Int) : Int {
+inline fun Context.color(@ColorRes color: Int): Int {
     return ContextCompat.getColor(this, color)
 }
 
