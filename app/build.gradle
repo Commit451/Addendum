@@ -1,33 +1,42 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+}
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    namespace 'com.commit451.addendum.sample'
+    compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.commit451.addendum.sample"
-        minSdkVersion 21
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        applicationId 'com.commit451.addendum.sample'
+        minSdk 21
+        targetSdk rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName '1.0'
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
     }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-    implementation 'androidx.core:core-ktx:1.0.1'
-    
-    implementation "androidx.appcompat:appcompat:1.0.2"
-
-    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.jakewharton.timber:timber:5.0.1'
 
     implementation project(':addendum')
     implementation project(':addendum-design')
@@ -35,5 +44,5 @@ dependencies {
     implementation project(':addendum-recyclerview')
     implementation project(':addendum-threetenabp')
 
-    kapt 'org.parceler:parceler:1.1.12'
+    kapt 'org.parceler:parceler:1.1.13'
 }
