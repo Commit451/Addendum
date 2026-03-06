@@ -27,7 +27,7 @@ inline fun Context.color(@ColorRes color: Int): Int {
 inline fun Context.copyToClipboard(label: String, text: String) {
     val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
     val clip = ClipData.newPlainText(label, text)
-    clipboard.primaryClip = clip
+    clipboard.setPrimaryClip(clip)
 }
 
 /**

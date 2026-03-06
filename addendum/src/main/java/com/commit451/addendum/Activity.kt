@@ -46,14 +46,14 @@ inline fun <T : View> Activity.bindView(@IdRes id: Int): Lazy<T> {
 inline fun <T> Activity.extra(key: String): Lazy<T> {
     return lazy(LazyThreadSafetyMode.NONE) {
         @Suppress("UNCHECKED_CAST")
-        intent.extras.get(key) as T
+        intent.extras?.get(key) as T
     }
 }
 
 inline fun <T> Activity.extraOrNull(key: String): Lazy<T?> {
     return lazy(LazyThreadSafetyMode.NONE) {
         @Suppress("UNCHECKED_CAST")
-        intent.extras.get(key) as? T?
+        intent.extras?.get(key) as? T?
     }
 }
 

@@ -3,6 +3,7 @@
 package com.commit451.addendum.design
 
 import android.widget.TextView
+import com.google.android.material.R
 import com.google.android.material.snackbar.Snackbar
 
 

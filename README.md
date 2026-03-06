@@ -1,30 +1,21 @@
 # Addendum
 Useful Kotlin Extensions for the Android SDK and popular Android Libraries
 
-[![Build Status](https://travis-ci.org/Commit451/Addendum.svg?branch=master)](https://travis-ci.org/Commit451/Addendum) [![](https://jitpack.io/v/Commit451/Addendum.svg)](https://jitpack.io/#Commit451/Addendum)
+[![Build](https://github.com/Commit451/Addendum/actions/workflows/ci.yml/badge.svg)](https://github.com/Commit451/Addendum/actions/workflows/ci.yml) [![Maven Central](https://img.shields.io/maven-central/v/com.commit451/addendum.svg?label=Maven%20Central)](https://central.sonatype.com/search?q=g:com.commit451%20AND%20a:addendum)
 
 ## Gradle Dependency
-Add the jitpack url to the project:
-```groovy
-allprojects {
-    repositories {
-        ...
-        maven { url "https://jitpack.io" }
-    }
-}
-```
-then, in your app `build.gradle`
+In your app `build.gradle`:
 ```groovy
 dependencies {
-    implementation "com.github.Commit451.Addendum:addendum:latest.version.here"
+    implementation "com.commit451:addendum:latest.version.here"
     //for design support library
-    implementation "com.github.Commit451.Addendum:addendum-design:latest.version.here"
+    implementation "com.commit451:addendum-design:latest.version.here"
     //for RecyclerView support
-    implementation "com.github.Commit451.Addendum:addendum-recyclerview:latest.version.here"
+    implementation "com.commit451:addendum-recyclerview:latest.version.here"
     //for Parceler support
-    implementation "com.github.Commit451.Addendum:addendum-parceler:latest.version.here"
+    implementation "com.commit451:addendum-parceler:latest.version.here"
     //for ThreeTenABP support
-    implementation "com.github.Commit451.Addendum:addendum-threetenabp:latest.version.here"
+    implementation "com.commit451:addendum-threetenabp:latest.version.here"
 }
 ```
 
